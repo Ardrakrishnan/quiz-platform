@@ -1,0 +1,24 @@
+:root { font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f6fa; color: #172033; }
+.app-main { max-width: 1240px; margin: 0 auto; padding: 34px 28px 64px; min-height: calc(100vh - 70px); }
+.page-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:26px; }
+.page-heading h1 { font-size: clamp(1.55rem, 3vw, 2rem); margin:0; font-weight:800; letter-spacing:-.04em; }
+.muted { color:#667085; }
+.home-card { min-height:220px; cursor:pointer; overflow:hidden; position:relative; transition:transform .2s, box-shadow .2s; }
+.home-card:hover { transform:translateY(-4px); box-shadow:0 16px 38px rgba(24,39,75,.12); }
+.home-card .MuiCardContent-root { height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:26px; }
+.home-icon { width:54px; height:54px; display:grid; place-items:center; border-radius:16px; background:rgba(255,255,255,.8); }
+.panel { padding:24px; }
+.option-row { display:flex; align-items:center; gap:8px; margin:9px 0; }
+.option-row .MuiTextField-root { flex:1; }
+.question-panel { border:1px solid #e5eaf2; border-radius:12px; padding:18px; margin-top:18px; }
+.quiz-progress { height:8px; border-radius:20px; background:#e8edf5; overflow:hidden; }
+.quiz-progress > span { display:block; height:100%; background:#1769ff; transition:width .2s; }
+.result-score { width:150px; height:150px; border-radius:50%; display:grid; place-items:center; margin:16px auto; background:linear-gradient(135deg,#eaf1ff,#e7fff8); color:#1769ff; font-size:2rem; font-weight:800; }
+@media (max-width: 640px) {
+  .app-main { padding:24px 15px 48px; }
+  .page-heading { align-items:flex-start; flex-direction:column; }
+  .panel { padding:17px; }
+  .home-card { min-height:185px; }
+}
